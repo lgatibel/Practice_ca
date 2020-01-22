@@ -1,0 +1,18 @@
+#!/bin/bash
+NUMBERS=(951 402 984 651 360 69 408 319 601 485 980 507 725 547 544 615 83 165 141 501 263 617 865 575 219 390 237 412 566 826 248 866 950 626 949 687 217 815 67 104 58 512 24 892 894 767 553 81 379 843 831 445 742 717 958 609 842 451 688 753 854 685 93 857 440 380 126 721 328 753 470 743 527)
+
+#Count the length of the table
+numbersLenght=${#NUMBERS[@]}
+
+#intialise INDEX variable
+INDEX=0
+while [ $INDEX -lt $numbersLenght ]; do
+    NUMBER=${NUMBERS[$INDEX]}
+    #Only print even number that are smaller than 237
+    if [[ $(($NUMBER % 2)) -eq 0 && $NUMBER -lt 237 ]]; then
+        #print number
+        echo $NUMBER;
+    fi
+    #increment INDEX varible
+    INDEX=$(($INDEX + 1)) 
+done
