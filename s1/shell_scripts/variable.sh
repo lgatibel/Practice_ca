@@ -2,6 +2,6 @@
 
 BIRTHDATE="Jan 1, 2000"
 Presents=10
-BIRTHDAY=`date -d $BIRTHDATE +%A`
+BIRTHDAY=`date -j -f '%b %d, %Y' "$BIRTHDATE" +%A`
 
-echo $BIRTHDAY;
+echo "I was born on $BIRTHDAY the $BIRTHDATE";
