@@ -1,7 +1,7 @@
 <?php
 
 // recursive function
-function factorielle(int $number, $index){
+function factorielle(float $number, float $index){
     $index--;
     $number *= $index;
 
@@ -20,9 +20,6 @@ if (empty($argument)) {
 } else {
     if ($argument == 1){
         echo $argument;
-    // Specifique case for result that is bigger than int size
-    } elseif ($argument > 20) {
-        echo "This result is superior to Int size try a number equal or lower than 20";
     } else {
         echo factorielle($argument, $argument);
     }
